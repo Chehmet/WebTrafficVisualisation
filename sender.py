@@ -9,8 +9,7 @@ SERVER_URL = "http://127.0.0.1:5000"
 
 def send_data(csv_file, server_url):
     with open(csv_file, newline='', encoding="utf-8") as file:
-        reader = csv.DictReader(file, delimiter=',')  # Changed delimiter to comma
-        # Convert fieldnames to lowercase with underscores
+        reader = csv.DictReader(file, delimiter=',')  
         reader.fieldnames = [name.lower().replace(" ", "_") for name in reader.fieldnames]
         data = list(reader)
 
@@ -20,7 +19,7 @@ def send_data(csv_file, server_url):
             "latitude": float(row["latitude"]),
             "longitude": float(row["longitude"]),
             "timestamp": int(row["timestamp"]),
-            "suspicious": float(row["suspicious"])  # Changed to float since your data has 0.0
+            "suspicious": float(row["suspicious"]) 
         }
 
         response = requests.post(f"{server_url}/receive", json=package)
