@@ -50,12 +50,4 @@ A Python script reads traffic data from a CSV file and sends it to the Flask ser
    
 3. Open your browser and navigate to `http://localhost:5000` to view the dashboard.
 
-## Usage
-1. Ensure the sender script is running and sending data to the Flask server.
-2. Observe the real-time updates on the dashboard, including the globe visualization and activity charts.
-
-## License
-This project is licensed under the MIT License.
-
-## Contact
 For any questions or feedback, please contact [me in telegtam](https://t.me/Chehmet).
