@@ -33,13 +33,21 @@ A Python script reads traffic data from a CSV file and sends it to the Flask ser
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/chehmet/traffic-analytics-dashboard.git
-   cd traffic-analytics-dashboard
+   git clone https://github.com/Chehmet/WebTrafficVisualisation.git
    ```
 2. Build and run the Docker containers:
    ```sh
    docker-compose up --build
    ```
+      Alternatively, if you do not have Docker installed, you can run the Python scripts directly:
+   ```sh
+   python backend.py
+   ```
+   In a separate terminal, run:
+   ```sh
+   python sender.py
+   ```
+   
 3. Open your browser and navigate to `http://localhost:5000` to view the dashboard.
 
 ## Usage
