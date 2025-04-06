@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Traffic Analytics Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+          }
+        }
+    </script>
 </head>
 <body>
-    <div class="dashboard">
-        <h1><i class="fas fa-globe-americas"></i> Traffic Analytics Dashboard</h1>
-        
-        <div id="map-container">
-            <div id="map"></div>
-            <div class="legend">
-                <h3><i class="fas fa-info-circle"></i> Legend</h3>
-                <p><span class="dot normal pulse"></span> Normal traffic</p>
-                <p><span class="dot suspicious pulse"></span> Suspicious traffic</p>
-            </div>
-        </div>
-        
-        <div class="stats-panel">
-            <div class="stat-card">
-                <h2><i class="fas fa-chart-line"></i> Activity</h2>
-                <div id="activity-chart-container">
-                    <canvas id="activity-chart"></canvas>
-                </div>
-            </div>
-            
-            <div class="stat-card">
-                <h2><i class="fas fa-map-marker-alt"></i> Top Countries</h2>
-                <ul id="top-countries"></ul>
-            </div>
-            
-            <div class="stat-card">
-                <h2><i class="fas fa-shield-alt"></i> Security Stats</h2>
-                <div class="stat-row">
-                    <span>Total connections:</span>
-                    <span id="total-count">0</span>
-                </div>
-                <div class="stat-row">
-                    <span>Normal:</span>
-                    <span id="normal-count">0</span>
-                </div>
-                <div class="stat-row">
-                    <span>Suspicious:</span>
-                    <span id="suspicious-count">0</span>
-                </div>
-            </div>
+<div class="dashboard">
+    <h1><i class="fas fa-globe-americas"></i> Traffic Analytics Dashboard</h1>
+
+    <div id="map-container">
+        <canvas id="map"></canvas>
+        <div class="legend">
+            <h3><i class="fas fa-info-circle"></i> Legend</h3>
+            <p><span class="dot normal pulse"></span> Normal traffic</p>
+            <p><span class="dot suspicious pulse"></span> Suspicious traffic</p>
         </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
+    <div class="stats-panel">
+        <div class="stat-card">
+            <h2><i class="fas fa-chart-line"></i> Activity</h2>
+            <div id="activity-chart-container">
+                <canvas id="activity-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <h2><i class="fas fa-map-marker-alt"></i> Top Countries</h2>
+            <ul id="top-countries"></ul>
+        </div>
+
+        <div class="stat-card">
+            <h2><i class="fas fa-shield-alt"></i> Security Stats</h2>
+            <div class="stat-row">
+                <span>Total connections:</span>
+                <span id="total-count">0</span>
+            </div>
+            <div class="stat-row">
+                <span>Normal:</span>
+                <span id="normal-count">0</span>
+            </div>
+            <div class="stat-row">
+                <span>Suspicious:</span>
+                <span id="suspicious-count">0</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </body>
 </html>

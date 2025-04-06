@@ -97,18 +97,18 @@ body {
     margin-right: 8px;
 }
 
-.normal { 
-    background: var(--success); 
-    box-shadow: 0 0 8px var(--success); 
+.normal {
+    background: var(--success);
+    box-shadow: 0 0 8px var(--success);
 }
 
-.suspicious { 
-    background: var(--danger); 
-    box-shadow: 0 0 8px var(--danger); 
+.suspicious {
+    background: var(--danger);
+    box-shadow: 0 0 8px var(--danger);
 }
 
-.pulse { 
-    animation: pulse 2s infinite; 
+.pulse {
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -181,11 +181,11 @@ h2 {
         grid-template-columns: 1fr;
         height: auto;
     }
-    
+
     #map-container {
         height: 60vh;
     }
-    
+
     .stats-panel {
         max-height: none;
     }

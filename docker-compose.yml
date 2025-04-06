@@ -6,18 +6,19 @@ services:
       - "5000:5000"
     volumes:
       - ./app:/app
-      - ./data:/data
+      - ./ip_addresses.csv:/app/ip_addresses.csv
     environment:
       - FLASK_ENV=development
-      - CSV_PATH=/data/ip_addresses.csv
+      - CSV_PATH=/app/ip_addresses.csv
+    command: ["python", "backend.py"]
 
   sender:
     build: .
-    command: ["python", "sender.py"]
     volumes:
-      - ./data:/data
+      - .:/app
     depends_on:
       - backend
     environment:
-      - CSV_PATH=/data/ip_addresses.csv
-      - BACKEND_URL=http://backend:5000/receive
+      - CSV_PATH=/app/ip_addresses.csv
+      - BACKEND_URL=http://backend:5000
+    command: ["python", "sender.py"]
