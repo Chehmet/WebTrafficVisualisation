@@ -1,7 +1,6 @@
 # Traffic Analytics Dashboard
 
-## Overview
-The Traffic Analytics Dashboard is a comprehensive project designed to visualize web traffic from various locations around the world. The primary goal is to strengthen knowledge in backend development using Python and Flask, as well as frontend development using Three.js for interactive and visually appealing visualizations.
+The Traffic Analytics Dashboard is a project designed to visualize web traffic from various locations around the world. The primary goal is to strengthen knowledge in backend development using Python and Flask, as well as frontend development using Three.js for interactive and visually appealing visualizations.
 
 ## Features
 - **Data Generation**: A Python script reads a CSV file containing traffic data and sends it to a Flask server.
