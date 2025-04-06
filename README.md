@@ -20,7 +20,7 @@ The frontend uses Three.js to create an interactive globe that displays traffic 
 ### Data Sender (Python Script)
 A Python script reads traffic data from a CSV file and sends it to the Flask server at specified intervals.
 
-## Screenshots
+## How system looks while running
 ![Screenshot 1](image.png)
 
 
